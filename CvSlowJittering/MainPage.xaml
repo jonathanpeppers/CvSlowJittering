@@ -89,16 +89,13 @@
                                                 FontAttributes="Bold"
                                                 FontSize="14"
                                                 Text="{Binding Name, Mode=OneTime}" />
-                                            <CollectionView ItemsSource="{Binding Times, Mode=OneTime}" SelectionMode="None">
-                                                <CollectionView.ItemsLayout>
-                                                    <LinearItemsLayout ItemSpacing="16" Orientation="Horizontal" />
-                                                </CollectionView.ItemsLayout>
-                                                <CollectionView.ItemTemplate>
+                                            <HorizontalStackLayout BindableLayout.ItemsSource="{Binding Times, Mode=OneTime}" CompressedLayout.IsHeadless="True">
+                                                <BindableLayout.ItemTemplate>
                                                     <DataTemplate x:DataType="x:String">
                                                         <Label FontSize="13" Text="{Binding ., Mode=OneTime}" />
                                                     </DataTemplate>
-                                                </CollectionView.ItemTemplate>
-                                            </CollectionView>
+                                                </BindableLayout.ItemTemplate>
+                                            </HorizontalStackLayout>
                                         </VerticalStackLayout>
                                     </DataTemplate>
                                 </BindableLayout.ItemTemplate>
