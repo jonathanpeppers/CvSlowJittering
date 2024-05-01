@@ -43,6 +43,9 @@
 	<ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'Android' ">
 		<Compile Include="..\..\..\Android.FrameMetrics\FrameMetricsReporter.cs" />
 	</ItemGroup>
+	<ItemGroup Condition=" '$(TargetPlatformIdentifier)' == 'iOS' or '$(TargetPlatformIdentifier)' == 'MacCatalyst' ">
+		<Compile Include="..\..\..\iOS.FrameMetrics\FrameMetricsReporter.cs" />
+	</ItemGroup>
 
 	<ItemGroup>
 		<MauiIcon Include="Resources\AppIcon\appicon.svg" ForegroundFile="Resources\AppIcon\appiconfg.svg" Color="#512BD4" />
